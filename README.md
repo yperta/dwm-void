@@ -1,4 +1,4 @@
-###### <h2 align="center"> Light weight DWM setup for arch linux </h2>
+###### <h2 align="center"> Light weight DWM setup for void linux </h2>
 
 
 #####  To install
