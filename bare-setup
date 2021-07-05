@@ -1,0 +1,70 @@
+#!/bin/bash
+
+MAIN_PKGS(){
+sudo xbps-install -Syu -u xbps && sudo xbps-install -Syu
+sudo xbps-install -Syu mesa-dri sxhkd polybar dbus elogind vim cmus wmname mpv chromium gvfs-mtp libfm-gtk+3 pcmanfm gvfs file-roller neofetch i3lock feh curl ntfs-3g picom pulseaudio pulsemixer rofi scrot eog evince kitty wget mousepad xorg-minimal zsh zsh-syntax-highlighting zsh-autosuggestions	
+sudo ln -s /etc/sv/dbus /var/service
+sudo ln -s /etc/sv/elogind /var/service
+}
+
+EMERGE_CONF(){
+chmod +x .config/* && chmod +x .config/rofi/*
+cp -r .config .themes .fonts .xinitrc .vimrc .zshrc /$HOME/ 
+fc-cache -fv
+}
+
+DWM_INS(){
+cd dwm-6.2
+sudo rm config.h && sudo make clean install && cd ..
+cd slstatus && sudo rm config.h && sudo make clean install
+curl https://raw.githubusercontent.com/yperta/walls/main/whitemt.jpg > /$HOME/.config/whitemt.jpg
+}
+
+FINAL_RBT(){
+chsh -s /bin/zsh 
+
+clear && /bin/echo -e '\n\n' "\e[1;32mREBOOTING IN ..3\e[0m"
+sleep 1
+/bin/echo -e '\n\n' "\e[1;32mREBOOTING IN ..2\e[0m"
+sleep 1
+/bin/echo -e '\n\n' "\e[1;32mREBOOTING IN ..1\e[0m"
+sleep 1
+/bin/echo -e '\n\n' "\e[1;32mREBOOTING NOW......\e[0m"
+
+sudo reboot
+}
+
+#begin
+#=====
+MAIN_PKGS
+EMERGE_CONF
+DWM_INS
+FINAL_RBT
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,35 @@
+#Screenshot binding
+Print
+    scrot #'scrot-%Y-%m-%d-%s_screenshot_$wx$h.jpg' -e 'mv $f $$(xdg-user-dir PICTURES)'
+
+
+#java fix
+#alt + j
+#   sh .config/java-fix.sh && sh /path/to/file.sh
+
+
+#pulsemixer
+alt + p
+	kitty -e pulsemixer
+
+
+#music player
+alt + y
+	kitty -e cmus
+
+
+#rofi power menu
+alt + F9
+	sh .config/rofi/powermenu.sh
+
+
+
+#launcher
+alt + @space
+	rofi -show drun #-show combi -icon-theme "Papirus" -show-icons
+
+
+
+# make sxhkd reload its configuration files:
+alt + Escape
+	pkill -USR1 -x sxhkd
