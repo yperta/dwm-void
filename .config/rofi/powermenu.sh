@@ -12,7 +12,7 @@ logout=" Logout"
 # Variable passed to rofi
 options="$shutdown\n$reboot\n$lock\n$logout"
 
-chosen=`echo -e $options | $rofi_command` # | awk '{print $1}' | tr -d '\r\n'`
+chosen=`echo $options | $rofi_command` # | awk '{print $1}' | tr -d '\r\n'`
 case $chosen in
     $shutdown)
         sudo poweroff
