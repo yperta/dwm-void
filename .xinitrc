@@ -14,8 +14,5 @@ slstatus &
 
 feh --bg-fill /$HOME/.config/whitemt.jpg &
 
-while true; do
-      dwm >/dev/null 2>&1
-done
+exec dbus-launch --exit-with-session bspwm 
 
-exec dwm
