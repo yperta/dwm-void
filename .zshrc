@@ -5,7 +5,7 @@ SAVEHIST=1000
 bindkey -v
 unsetopt nomatch
 
-PROMPT=$'\n''%B%F{035}%~ ::  | %b%f'
+PROMPT=$'\n''%B%F{white}%~ ::  | %b%f'
 RPROMPT="[%h]"
 
 
