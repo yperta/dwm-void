@@ -8,6 +8,8 @@ setxkbmap en &
 
 sxhkd &
 
+udiskie &
+
 picom --config $HOME/.config/picom/picom.conf &
 
 slstatus &
