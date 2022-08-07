@@ -2,7 +2,7 @@
 
 MAIN_PKGS(){
 sudo xbps-install -Syu -u xbps && sudo xbps-install -Syu
-sudo xbps-install -Syu base-devel libX11-devel libXft-devel libXinerama-devel mesa-dri sxhkd elogind vim mpv chromium udisks2 gvfs-mtp libfm-gtk+3 pcmanfm gvfs file-roller neofetch i3lock feh curl ntfs-3g papirus-icon-theme picom pulseaudio pulsemixer dmenu scrot eog evince kitty wget mousepad xorg-minimal zsh zsh-syntax-highlighting zsh-autosuggestions	
+sudo xbps-install -Syu base-devel libX11-devel libXft-devel libXinerama-devel mesa-dri sxhkd elogind vim mpv chromium udisks2 udiskie gvfs-mtp libfm-gtk+3 pcmanfm gvfs file-roller neofetch i3lock feh curl ntfs-3g papirus-icon-theme picom pulseaudio pulsemixer dmenu scrot eog evince kitty wget mousepad xorg-minimal zsh zsh-syntax-highlighting zsh-autosuggestions	
 sudo ln -s /etc/sv/elogind /var/service
 }
 
